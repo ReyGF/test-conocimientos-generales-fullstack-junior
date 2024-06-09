@@ -13,9 +13,7 @@ class UserFormType extends AbstractType
     {
         $builder
             ->add('username')
-            ->add('roles')
-            ->add('email')
-        ;
+            ->add('email');
     }
 
     public function configureOptions(OptionsResolver $resolver): void
