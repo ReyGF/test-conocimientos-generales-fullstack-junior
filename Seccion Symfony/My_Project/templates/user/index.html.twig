@@ -3,5 +3,58 @@
 {% block title %}Hello UserController!{% endblock %}
 
 {% block body %}
-    {{form(form)}}
+
+    <section class= "formulario">
+        {{form(form)}}
+        <button> Enviar </button>
+    </section>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #abcdef;
+            margin: 20;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .formulario {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+        }
+        .formulario label,
+        .formulario input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .formulario label {
+            font-weight: bold;
+        }
+
+        .formulario input {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .formulario button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+
+        .formulario button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+     
 {% endblock %}
