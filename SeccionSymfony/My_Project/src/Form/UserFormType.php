@@ -6,6 +6,8 @@ use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class UserFormType extends AbstractType
 {
@@ -13,7 +15,8 @@ class UserFormType extends AbstractType
     {
         $builder
             ->add('username')
-            ->add('email');
+            ->add('email')
+            ->add('Enviar', SubmitType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

@@ -14,6 +14,13 @@ use Symfony\Component\HttpFoundation\Request;
 
 class UserController extends AbstractController
 {
+    private EntityManagerInterface $em;
+
+    public function __constructor(EntityManagerInterface $em)
+    {
+        $this->em = $em;
+    }
+
     #[Route('/user', name: 'app_user')]
     public function index(Request $request): Response
     {
@@ -21,6 +28,11 @@ class UserController extends AbstractController
         $user = new User();
         $form = $this->createForm(UserFormType::class, $user);
         $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->em->persist($user);
+            $this->em->flush();
+        }
 
         return $this->render('user/index.html.twig', [
             'form' => $form->createView()

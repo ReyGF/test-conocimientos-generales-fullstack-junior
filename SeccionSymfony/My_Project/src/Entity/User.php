@@ -2,9 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\UserRepository;
+use App\Validator\Constraints as CustomAssert;
+use Symfony\Component\Validator\Contraints as Assert;
 use Symfony\Component\Security\Core\User\UserInterface;
+
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 class User
@@ -17,6 +20,11 @@ class User
     #[ORM\Column(length: 180, unique: true)]
     private ?string $username = null;
 
+
+    /**
+     * @Assert\NotBlank
+     * @CustomAssert\EmailDomainRestriction
+     */
     #[ORM\Column(length: 255)]
     private ?string $email = null;
 
