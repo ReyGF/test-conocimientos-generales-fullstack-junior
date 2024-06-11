@@ -19,4 +19,4 @@
 
 # Estado del Proyecto
 
-- Hasta este punto faltan las respuestas 8,9,10 de la seccion Symfony, debido a mi poca experiencia con el lenguaje y el framework se me ha dificultado la velocidad de entrega del proyecto. De todas formas voy a seguir actualizando el github hasta que termine el proyecto. Muchas Gracias! por su tiempo y esta gran oportunidad.
+- Hasta este punto faltan las respuestas 8 y 10 de la seccion Symfony, debido a mi poca experiencia con el lenguaje y el framework se me ha dificultado la velocidad de entrega del proyecto. De todas formas voy a seguir actualizando el github hasta que termine el proyecto. Muchas Gracias! por su tiempo y esta gran oportunidad.
